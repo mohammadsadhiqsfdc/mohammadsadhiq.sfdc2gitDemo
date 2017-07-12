@@ -1,0 +1,15 @@
+<apex:page id="pg" controller="js1Contr">
+    <apex:form id="fm">
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputText id="name" label="Name" onchange="show1()"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection >
+                <apex:inputText id="age" label="Age" onchange="show2()"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>    
+    
+    </apex:form>
+
+</apex:page>

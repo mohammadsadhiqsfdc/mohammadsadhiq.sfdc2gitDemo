@@ -1,0 +1,17 @@
+{
+    "projectName": "mohammadsadhiq.sfdc2gitDemo",
+    "username": "mohammadsadhiq.sfdc@gmail.com",
+    "id": "fa4f56b0-66a5-11e7-b130-0d7e393b30c5",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://na35.salesforce.com",
+    "workspace": "C:\\Users\\Mohammad Sadhiq\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}

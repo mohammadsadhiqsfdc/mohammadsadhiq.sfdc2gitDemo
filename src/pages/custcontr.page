@@ -1,0 +1,10 @@
+<apex:page controller="acccontr">
+
+    <apex:form >
+        <apex:inputText value="{!acc1.name}"/><br/>
+        <apex:inputText value="{!acc1.phone}"/><br/>    
+    
+        <apex:commandButton value="AccSave" action="{!AccSave1}"/>
+    </apex:form>
+
+</apex:page>

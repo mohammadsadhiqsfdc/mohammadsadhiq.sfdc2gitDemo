@@ -1,0 +1,13 @@
+<apex:page controller="test7Contr">
+
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:outputText label="out1" value="{!out1}">
+            
+        
+            </apex:outputText>
+    
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+</apex:page>

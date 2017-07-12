@@ -1,0 +1,34 @@
+<apex:page controller="ActionSupFunController">
+ <apex:form >
+  <h1>Demonstration of difference between Action function and Action Support</h1>
+
+  <apex:actionFunction name="myactionfun"  action="{!actionFunMethod}" reRender="outBlk">
+ <!--     <apex:param name="param2" value="secondparam" assignTo="{!Display_This_Param2}"/> -->
+     <apex:param name="param2" value=""/> 
+  </apex:actionFunction>
+  
+  <br></br> <br></br> 
+  
+  Input Text <apex:inputText >
+                <apex:actionSupport action="{!actionSupMethod}" event="onclick" reRender="outBlk" >
+                    <apex:param name="param1" value="firstparam"/>
+                </apex:actionSupport>
+                  
+             </apex:inputText> <br></br>
+             
+Click me to call action function method   <apex:inputcheckbox onclick="myJavaMethod()" /><br></br> <br></br>   
+    <apex:pageBlock id="outBlk">
+        <apex:outputText value="{!Display_This_String}" id="outptText"/><br/>
+        <apex:outputText value="{!Display_This_Param1}" id="outParam1"/><br/>
+        <apex:outputText value="{!Display_This_Param2}" id="outParam2"/>
+    </apex:pageBlock>         
+
+  <script>
+   function myJavaMethod(){
+
+
+      myactionfun('secondparam');
+  }
+  </script>
+ </apex:form> 
+</apex:page>

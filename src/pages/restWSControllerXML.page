@@ -1,0 +1,20 @@
+<apex:page controller="restWSControllerXML" tabStyle="Contact">
+  <apex:form >
+    <apex:pageBlock title="Add Pizzas">
+		   <apex:pageMessages id="showmsg"></apex:pageMessages>
+           <apex:pageBlockTable var="lp" value="{!listWrap}">
+               	<apex:column headerValue="Select">
+               		<apex:inputCheckbox value="{!lp.isSelected}"/>
+               </apex:column>apex:column>
+                <apex:column headerValue=" Cont Id" value="{!lp.pizzaId}"/>
+                <apex:column headerValue=" Cont Name" value="{!lp.pizzaName}"/>            
+                <apex:column headerValue=" Cont Email" value="{!lp.pizzaCost}"/>            
+                <apex:column headerValue=" Cont Address" value="{!lp.pizzaDesc}"/>
+            </apex:pageBlockTable>
+
+        <apex:pageBlockButtons >
+              <apex:commandButton value="Save" action="{!doSave}" reRender="showmsg"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

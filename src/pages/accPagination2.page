@@ -1,0 +1,11 @@
+<apex:page Controller="accPagination2Contr">
+    <apex:form >
+        <apex:pageBlock title="Account Pagination Example">
+            <apex:pageBlockTable value="{!accRecords2}" var="acc2">
+                <apex:column headerValue="Name" value="{!acc2.Name}"/>
+                <apex:column headerValue="Phone" value="{!acc2.Phone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

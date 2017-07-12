@@ -1,0 +1,33 @@
+<apex:page controller="custRegVFContr1" extensions="custRegVFContr1Ext" tabStyle="Contact">
+    <apex:form >
+        <apex:pageBlock title="Customer Registration Form1">
+            <apex:pageBlockSection title="Pesronal Info" columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="Contact LastName"></apex:outputText>
+                         <apex:panelGroup styleClass="col02 requiredInput" layout="block"> 
+                            <apex:panelGroup styleClass="requiredBlock"></apex:panelGroup>     
+                            <apex:inputText value="{!cName}" required="true"/>
+                         </apex:panelGroup>
+                    </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value="Contact Email"></apex:outputText>
+                    <apex:inputText value="{!cEmail}"/>                      
+                </apex:pageBlockSectionItem>
+ 
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton Value="Save" action="{!doSave}"/>
+            
+            </apex:pageBlockButtons>
+            
+            </apex:pageBlock>            
+            <apex:pageBlock title="Existing Accounts">
+                <apex:pageBlockTable value="{!accList}" var="a">
+                    <apex:column headerValue="Acc Name" value="{!a.Name}"/>
+                    <apex:column headerValue="Acc Email" value="{!a.Phone}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlock>    
+    
+    </apex:form>
+</apex:page>

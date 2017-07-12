@@ -1,0 +1,6 @@
+<apex:page >
+   <apex:pageMessage severity="error" 
+   strength="3" 
+   summary="{!$Label.testCustLabel1}" 
+   />
+</apex:page>

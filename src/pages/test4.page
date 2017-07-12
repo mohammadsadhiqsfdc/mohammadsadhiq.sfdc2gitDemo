@@ -1,0 +1,26 @@
+<apex:page standardController="Account">
+    <apex:pageBlock >
+        <apex:form >
+            <apex:pageBlockTable value="{!account.contacts}" var="ac">
+                <apex:column headerValue="Name1">
+                    <apex:outputPanel >
+                     <apex:actionSupport event="onmouseover" rerender="ren">
+                        {!ac.name}
+                        <apex:param value="{!ac.id}" name="cid"/>
+                     </apex:actionSupport>
+                     </apex:outputPanel>
+                </apex:column>
+                <apex:column >
+                        <apex:actionSupport event="onmouseover" rerender="ren">
+                            {!ac.phone}
+                        </apex:actionSupport>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:form>
+    </apex:pageBlock> 
+       
+    <apex:outputPanel id="ren">
+        <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="false"/>
+    </apex:outputPanel>
+    
+</apex:page>

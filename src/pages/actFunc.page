@@ -1,0 +1,18 @@
+<apex:page controller="actFuncContr">
+    <apex:form >
+        <input name='btn1' class='btn' type='Button' value='SaveBtn' onclick='InsertRec_JS();return false;' />
+        
+        <apex:actionFunction action="{!meth1}" reRender="statuspanel" status="status1" name="InsertRec_JS" oncomplete="UpdateRec_JS()"/>
+        <apex:actionFunction action="{!meth2}" reRender="statuspanel" status="status2" name="UpdateRec_JS"/>
+    </apex:form>    
+    
+    <apex:outputPanel id="statuspanel">
+         <apex:actionStatus id="status1" startText="Insert Records"/>
+         <apex:actionStatus id="status2" startText="Update Records"/>         
+         
+         
+    
+    </apex:outputPanel>
+
+    
+</apex:page>

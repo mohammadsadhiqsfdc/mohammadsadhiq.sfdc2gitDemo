@@ -1,0 +1,22 @@
+<apex:page controller="userVFContr">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1" dir="LTR">
+                <apex:outputText style="font-weight: bold;" value="Current Running User : {!$User.FirstName} {!$User.LastName}"/>
+                <apex:pageBlockSectionItem dir="LTR">
+                    <apex:outputText value="User :"/>
+                    <apex:selectList value="{!selectedUser}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!listUsers}"></apex:selectOptions>
+                        <apex:actionSupport event="onchange" action="{!displayPic}" rerender="pb1"/>    
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="pb1">
+                <apex:outputPanel rendered="{!pb1Sw}">
+                    <apex:outputText >This is Pb1 pageblocksection : {!selectedUser} {!pb1Sw}</apex:outputText>
+                    <apex:image alt="None" url="{!imgUrl}" />
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+        </apex:pageBlock>    
+    </apex:form>
+</apex:page>

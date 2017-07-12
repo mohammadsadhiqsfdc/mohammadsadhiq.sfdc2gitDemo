@@ -1,0 +1,18 @@
+<apex:page standardcontroller="Account" extensions="MyController" tabStyle="Account">
+    <apex:form >
+       <apex:actionFunction name="actionFunName" action="{!ActionFunMethode}" reRender="outputtxtId"/>
+       <apex:pageBlock > 
+            <apex:outputLabel for="inptCheckBox" value="Check this box to call Controller method from js using ActionFunction" style="color:green;"></apex:outputLabel> 
+            <apex:inputcheckbox onclick="javaScrpt()" id="inptCheckBox"/>
+       </apex:pageBlock> 
+      
+      <apex:outputText value="{!MyString_From_Methode}" id="outputtxtId"></apex:outputText> 
+    </apex:form> 
+    
+    <script>
+      function javaScrpt(){
+       actionFunName(); 
+      }
+    </script>
+     
+</apex:page>

@@ -1,0 +1,67 @@
+<apex:page >
+    <apex:form >
+    <style>
+        .headerCSS{
+               font-size=15px;color:red;font-weight:bold; 
+                
+        }
+        
+        .textCSS{
+               font-size=20px;color:green;font-weight:ligth;         
+        
+        }
+        
+        .buttonCSS{
+               background:green;color:white;font-weight:bold;                 
+        }
+    </style>
+        <table border="1" align="center">
+            <tr>
+                <td colspan = "2" align="center"> 
+                    <apex:outputText value="New Customer Registration Form" styleclass="headerCSS"> </apex:outputText>
+                 </td>
+            </tr>
+            <tr>
+                <td width="100px"> 
+                    <apex:outputText value="Name" styleClass="textCSS"> </apex:outputText>
+                </td>
+                <td>
+                    <apex:inputtext />
+                </td> 
+            </tr>
+            <tr>
+                <td> 
+                    <apex:outputText value="City" styleClass="textCSS"> </apex:outputText>
+                </td>
+                <td>
+                    <apex:inputtext />
+                </td> 
+            </tr>
+            <tr>
+                <td> 
+                    <apex:outputText value="Country" styleClass="textCSS"> </apex:outputText>
+                </td>
+                <td>
+                    <apex:inputtext />
+                </td> 
+            </tr>
+            <tr>
+                <td> 
+                    <apex:outputText value="Phone" styleClass="textCSS"> </apex:outputText>
+                </td>
+                <td>
+                    <apex:inputtext />
+                </td> 
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> 
+                    <button type="button" class="buttonCSS">Click Me!</button>
+                    <apex:commandButton value="Save" style="background:green;color:white;"/> &nbsp; &nbsp;
+                    <apex:commandButton value="Cancel" styleClass="buttonCSS"/>                    
+                </td>
+            </tr>
+            
+        </table>
+    
+    </apex:form>
+</apex:page>

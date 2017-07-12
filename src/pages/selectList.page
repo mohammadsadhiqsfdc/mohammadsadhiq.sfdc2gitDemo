@@ -1,0 +1,20 @@
+<apex:page controller="selectListContr">
+
+    <apex:form >
+    
+
+        <apex:selectList value="{!selected}" size="1">
+           <apex:actionSupport event="onchange" action="{!assign}"  rerender="out1"/>
+            <apex:selectOptions value="{!optValues}"/>
+   
+        </apex:selectList>
+
+    
+    </apex:form>
+    
+    <apex:outputPanel id="out1">
+    
+        <apex:outputText > Selected key is {!selected1} value is {!selectedValue1}</apex:outputText>
+    </apex:outputPanel>
+
+</apex:page>

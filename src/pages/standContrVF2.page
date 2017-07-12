@@ -1,0 +1,21 @@
+<apex:page Controller="accPageContr" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!lstA}" var="a">
+            <apex:column headerValue="Acc Name" value="{!a.Name}"/>
+            <apex:column headerValue="Acc Phone" value="{!a.phone}"/>        
+        
+        </apex:pageBlockTable>
+            <apex:pageBlockButtons >
+            <apex:commandButton value="First" />
+        </apex:pageBlockButtons>
+<!--        
+            <apex:commandButton value="Previous" action="{!previous}"/>
+            <apex:commandButton value="Next" action="{!Next}"/>
+            <apex:commandButton value="Last" action="{!Next}"/>                                
+
+-->    
+    </apex:pageBlock>
+
+    </apex:form>
+</apex:page>

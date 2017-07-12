@@ -1,0 +1,25 @@
+<apex:page standardController="Account" extensions="accPagination1Ext1" recordSetVar="accounts">
+<apex:form >
+  <apex:pageBlock title="Select the List View">
+      <apex:pageBlock >
+          View &nbsp;
+              <apex:selectList value="{!filterId}" size="1">
+                  <apex:actionSupport event="onchange" reRender="account_table"/>
+                  <apex:selectOptions value="{!listviewoptions}" />
+              </apex:selectList>
+
+      </apex:pageBlock>
+  </apex:pageBlock>  
+  <apex:pageBlock >
+    <apex:pageBlockTable value="{!accounts}" var="a" id="account_table">
+      <apex:column value="{!a.name}"/>
+      <apex:column value="{!a.phone}"/>
+    </apex:pageBlockTable>
+    <apex:pageBlockButtons location="Bottom">
+        <apex:commandButton value="Previous" action="{!previous}"/>
+        <apex:commandButton value="Next" action="{!next}"/>
+        <apex:commandButton value="Go" action="{!list}"/>
+    </apex:pageBlockButtons>
+  </apex:pageBlock>
+</apex:form>
+</apex:page>

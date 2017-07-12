@@ -1,0 +1,22 @@
+<apex:page controller="restWSController" tabStyle="Contact">
+  <apex:form >
+    <apex:pageBlock title="Add Contacts">
+		   <apex:pageMessages id="showmsg"></apex:pageMessages>
+           <apex:pageBlockTable var="lc" value="{!listWrap}">
+               	<apex:column headerValue="Select">
+               		<apex:inputCheckbox value="{!lc.isSelected}"/>
+               </apex:column>apex:column>
+                <apex:column headerValue=" Cont Id" value="{!lc.contId}"/>
+                <apex:column headerValue=" Cont Name" value="{!lc.contName}"/>            
+                <apex:column headerValue=" Cont Email" value="{!lc.contEmail}"/>            
+                <apex:column headerValue=" Cont Address" value="{!lc.contAddress}"/>
+                <apex:column headerValue=" Cont Gender" value="{!lc.contGender}"/>
+                <apex:column headerValue=" Cont Mobile" value="{!lc.contMobile}"/>                                            
+            </apex:pageBlockTable>
+
+        <apex:pageBlockButtons >
+              <apex:commandButton value="Save" action="{!doSave}" reRender="showmsg"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

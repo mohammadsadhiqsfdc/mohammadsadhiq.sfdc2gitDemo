@@ -1,0 +1,12 @@
+<apex:page controller="accPagination3Contr">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputPanel >
+                <apex:panelGrid columns="2" cellpadding="10" cellspacing="10px">
+                    <apex:outputLink Value="https://www.google.com/">OutputLink1</apex:outputLink>
+                    <apex:commandLink value="commandLink1"  action="{!linkdcu}" target="_blank"/>
+                </apex:panelGrid>
+            </apex:outputPanel>  
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
